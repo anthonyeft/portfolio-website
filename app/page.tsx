@@ -1,9 +1,15 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import RecentProjects from "@/components/RecentProjects";
+import Awards from "@/components/Awards";
 
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
+import Publications from "@/components/Publications";
+import Talks from "@/components/Talks";
+import News from "@/components/News";
+import Contact from "@/components/Contact";
+
 
 export default function Home() {
   return (
@@ -13,6 +19,11 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
+        <Awards />
+        <Publications />
+        <Talks />
+        <News />
+        <Contact />
       </div>
     </main>
   );

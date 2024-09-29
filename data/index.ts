@@ -1,7 +1,10 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Awards", link: "#awards" },
+  { name: "Publications", link: "#publications" },
+  { name: "Talks", link: "#talks" },
+  { name: "News", link: "#news" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -10,7 +13,7 @@ export const gridItems = [
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "md:col-span-2 md:row-span-1 md:min-h-[35vh] lg:col-span-3 lg:row-span-4 lg:min-h-[60vh]",
+    className: "md:col-span-2 md:row-span-1 md:min-h-[30vh] lg:col-span-3 lg:row-span-4 lg:min-h-[50vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",

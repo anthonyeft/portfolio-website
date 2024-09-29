@@ -8,14 +8,17 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  delay = 0, // New delay prop
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  delay?: number; // New delay prop type
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
+
   useEffect(() => {
     animate(
       "span",
@@ -25,7 +28,7 @@ export const TextGenerateEffect = ({
       },
       {
         duration: duration ? duration : 1,
-        delay: stagger(0.1),
+        delay: stagger(0.2, { startDelay: delay }), // Apply the delay here
       }
     );
   }, [scope.current]);
@@ -37,9 +40,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
-              } opacity-0`}
+              className="text-white opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -55,7 +56,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="my-4">
-        <div className=" dark:text-white text-black leading-snug tracking-wide">
+        <div className="dark:text-white text-black leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
