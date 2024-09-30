@@ -97,17 +97,64 @@ export const projects = [
   },
 ];
 
-export const socialMedia = [
+export const awards = [
   {
-    id: 1,
-    img: "/git.svg",
+    title: "Grade 10",
+    description: "ISEF & BASEF",
+    img: "/award4.jpg",
+    content: () => (
+      <>
+        <p>Achievements in Grade 10:</p>
+        <ul className="list-disc pl-5">
+          <li>First Place Grand Award at ISEF 2024</li>
+          <li>Pinnacle Best in Fair Award at BASEF 2024</li>
+          <li>Developed "Rapid Screening of Skin Cancers with M-SCAHN"</li>
+        </ul>
+      </>
+    ),
   },
   {
-    id: 2,
-    img: "/twit.svg",
+    title: "Grade 9",
+    description: "BASEF & ISEF",
+    img: "/award3.jpg",
+    content: () => (
+      <>
+        <p>Achievements in Grade 9:</p>
+        <ul className="list-disc pl-5">
+          <li>Participated in BASEF and ISEF</li>
+          <li>Won multiple category awards</li>
+          <li>Continued research in AI-based diagnostics</li>
+        </ul>
+      </>
+    ),
   },
   {
-    id: 3,
-    img: "/link.svg",
+    title: "Grade 8",
+    description: "BASEF, CWSF, ETFO",
+    img: "/award2.jpg",
+    content: () => (
+      <>
+        <p>Achievements in Grade 8:</p>
+        <ul className="list-disc pl-5">
+          <li>Best Junior Project at BASEF 2023</li>
+          <li>Silver Merit Award at CWSF 2023</li>
+          <li>ETFO Math & Science Award: Top Student (Grade 8)</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "Grade 7",
+    description: "BASEF",
+    img: "/award1.jpg",
+    content: () => (
+      <>
+        <p>Achievements in Grade 7:</p>
+        <ul className="list-disc pl-5">
+          <li>Participated in BASEF</li>
+          <li>Gained foundational experience in science fairs</li>
+        </ul>
+      </>
+    ),
   },
 ];

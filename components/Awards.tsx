@@ -1,82 +1,193 @@
 "use client";
+import Image from "next/image";
+import React, { useEffect, useId, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useOutsideClick } from "./ui/hooks/use-outside-click";
+import { awards } from "@/data/index.tsx";
 
-import { FaLocationArrow } from "react-icons/fa6";
+const Awards = () => {
+  const [active, setActive] = useState<(typeof awards)[number] | boolean | null>(
+    null
+  );
+  const id = useId();
+  const ref = useRef<HTMLDivElement>(null);
 
-import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setActive(false);
+      }
+    }
 
-const RecentProjects = () => {
+    if (active && typeof active === "object") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
+
+  useOutsideClick(ref, () => setActive(null));
+
   return (
-    <div className="py-20" id="awards">
-      <h1 className="heading text-purple">
-        Awards
-      </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-4 mt-6">
-        {projects.map(({id, title, des, img, iconLists, link}) => (
-          <div
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
-            key={id}
-          >
-            <PinContainer
-              title={link}
-              href={link}
+    <>
+      <AnimatePresence>
+        {active && typeof active === "object" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/20 h-full w-full z-10"
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {active && typeof active === "object" ? (
+          <div className="fixed inset-0  grid place-items-center z-[100]">
+            <motion.button
+              key={`button-${active.title}-${id}`}
+              layout
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.05,
+                },
+              }}
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              onClick={() => setActive(null)}
             >
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
+              <CloseIcon />
+            </motion.button>
+            <motion.div
+              layoutId={`card-${active.title}-${id}`}
+              ref={ref}
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+            >
+              <motion.div layoutId={`image-${active.title}-${id}`}>
+                <Image
+                  priority
+                  width={200}
+                  height={200}
+                  src={active.img}
+                  alt={active.title}
+                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
-              </div>
+              </motion.div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {title}
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {des}
-              </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+              <div>
+                <div className="flex justify-between items-start p-4">
+                  <div className="">
+                    <motion.h3
+                      layoutId={`title-${active.title}-${id}`}
+                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
+                      {active.title}
+                    </motion.h3>
+                    <motion.p
+                      layoutId={`description-${active.description}-${id}`}
+                      className="text-neutral-600 dark:text-neutral-400 text-base"
+                    >
+                      {active.description}
+                    </motion.p>
+                  </div>
                 </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                <div className="pt-4 relative px-4">
+                  <motion.div
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-96 overflow-y-auto pb-10 flex flex-col items-start gap-4 dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                  >
+                    {typeof active.content === "function"
+                      ? active.content()
+                      : active.content}
+                  </motion.div>
                 </div>
               </div>
-            </PinContainer>
+            </motion.div>
           </div>
+        ) : null}
+      </AnimatePresence>
+      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
+        {awards.map((award, index) => (
+          <motion.div
+            layoutId={`card-${award.title}-${id}`}
+            key={award.title}
+            onClick={() => setActive(award)}
+            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+          >
+            <div className="flex gap-4 flex-col  w-full">
+              <motion.div layoutId={`image-${award.title}-${id}`}>
+                <Image
+                  width={100}
+                  height={100}
+                  src={award.img}
+                  alt={award.title}
+                  className="h-60 w-full  rounded-lg object-cover object-top"
+                />
+              </motion.div>
+              <div className="flex justify-center items-center flex-col">
+                <motion.h3
+                  layoutId={`title-${award.title}-${id}`}
+                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                >
+                  {award.title}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${award.description}-${id}`}
+                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                >
+                  {award.description}
+                </motion.p>
+              </div>
+            </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </ul>
+    </>
+  );
+}
+
+export const CloseIcon = () => {
+  return (
+    <motion.svg
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 0.05,
+        },
+      }}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4 text-black"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 6l-12 12" />
+      <path d="M6 6l12 12" />
+    </motion.svg>
   );
 };
 
-export default RecentProjects;
+export default Awards;

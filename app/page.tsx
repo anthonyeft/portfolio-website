@@ -4,7 +4,7 @@ import RecentProjects from "@/components/RecentProjects";
 import Awards from "@/components/Awards";
 
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { navItems } from "@/data";
+import { navItems } from "@/data/index.tsx";
 import Publications from "@/components/Publications";
 import Talks from "@/components/Talks";
 import News from "@/components/News";
