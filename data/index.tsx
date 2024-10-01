@@ -100,7 +100,7 @@ export const projects = [
 export const awards = [
   {
     title: "Grade 10",
-    description: "ISEF & BASEF",
+    description: "",
     img: "/award4.jpg",
     content: () => (
       <>
@@ -115,7 +115,7 @@ export const awards = [
   },
   {
     title: "Grade 9",
-    description: "BASEF & ISEF",
+    description: "",
     img: "/award3.jpg",
     content: () => (
       <>
@@ -130,7 +130,7 @@ export const awards = [
   },
   {
     title: "Grade 8",
-    description: "BASEF, CWSF, ETFO",
+    description: "",
     img: "/award2.jpg",
     content: () => (
       <>
@@ -145,7 +145,7 @@ export const awards = [
   },
   {
     title: "Grade 7",
-    description: "BASEF",
+    description: "",
     img: "/award1.jpg",
     content: () => (
       <>
