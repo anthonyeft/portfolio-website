@@ -29,9 +29,12 @@ const config = {
       colors: {
         black: {
           DEFAULT: "#000",
-          100: "#08090A",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+          100: "#0a0a0a",
+          200: "#0d0d0d",
+          300: "#1a1a1a",
+        },
+        card_border_color: {
+          DEFAULT: "rgba(255, 255, 255, 0.1)",
         },
         white: {
           DEFAULT: "#FFF",
