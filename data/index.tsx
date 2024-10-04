@@ -101,7 +101,7 @@ export const awards = [
   {
     title: "Grade 10",
     description: "",
-    img: "/award4.jpg",
+    img: "/award3.jpg",
     content: () => (
       <>
         <p>Achievements in Grade 10:</p>
