@@ -1,3 +1,6 @@
+import { FaReact, FaPython, FaNodeJs, FaDatabase} from "react-icons/fa";
+
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -8,57 +11,13 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "md:col-span-2 md:row-span-1 md:min-h-[30vh] lg:col-span-3 lg:row-span-4 lg:min-h-[50vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "My tech stack",
-    description: "I constantly improve",
-    className: "md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "ML enthusiast with a passion for research",
-    description: "",
-    className: "md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2",
-    imgClassName: "h-full",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-  {
-    id: 4,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-3 lg:max-h-[35vh]",
-    imgClassName: "absolute right-0 bottom-0 w-1/2 md:w-96",
-    titleClassName: "justify-center md:justify-start lg:justify-center pr-20",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 5,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-3 lg:max-h-[35vh]",
-    imgClassName: "",
-    titleClassName: "justify-center items-center text-center",
-    img: "",
-    spareImg: "",
-  },
+export const tools = [
+  { name: "React", icon: <FaReact className="text-blue-400 w-5 h-5" />, inProgress: false },
+  { name: "Python", icon: <FaPython className="text-green-400 w-5 h-5" />, inProgress: false },
+  { name: "Node.js", icon: <FaNodeJs className="text-lime-400 w-5 h-5" />, inProgress: false },
+  { name: "SQL/Databases", icon: <FaDatabase className="text-orange-400 w-5 h-5" />, inProgress: false },
+  { name: "Next.js", icon: <FaReact className="text-white w-5 h-5" />, inProgress: true },
+  { name: "TensorFlow", icon: <FaPython className="text-white w-5 h-5" />, inProgress: true },
 ];
 
 

@@ -103,6 +103,7 @@ const config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        
         shimmer: {
           from: {
             backgroundPosition: "0 0",
