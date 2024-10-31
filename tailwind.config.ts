@@ -191,6 +191,27 @@ const config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    function ({ addUtilities}: any) {
+      const newUtilities = {
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgb(31 31 31) black",
+        },
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar": {
+            width: "8px",
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "none",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "rgb(60 60 60)",
+            borderRadius: "20px",
+          },
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
   ],
 } satisfies Config;
 

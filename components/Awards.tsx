@@ -74,8 +74,8 @@ const Awards = () => {
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   src={active.img}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -117,42 +117,51 @@ const Awards = () => {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {awards.map((award, index) => (
-          <motion.div
-            layoutId={`card-${award.title}-${id}`}
-            key={award.title}
-            onClick={() => setActive(award)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-4 flex-col  w-full">
-              <motion.div layoutId={`image-${award.title}-${id}`}>
-                <Image
-                  width={100}
-                  height={100}
-                  src={award.img}
-                  alt={award.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
-                <motion.h3
-                  layoutId={`title-${award.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
-                >
-                  {award.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${award.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
-                >
-                  {award.description}
-                </motion.p>
+      <section
+        id="awards"
+        className="flex flex-col py-12"
+      >
+        <h1 className="heading mb-14">
+          Awards
+        </h1>
+
+        <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-4 items-start gap-4">
+          {awards.map((award, index) => (
+            <motion.div
+              layoutId={`card-${award.title}-${id}`}
+              key={award.title}
+              onClick={() => setActive(award)}
+              className="p-4 flex flex-col hover:bg-neutral-800 transition-colors duration-300 rounded-xl cursor-pointer"
+            >
+              <div className="flex gap-4 flex-col w-full">
+                <motion.div layoutId={`image-${award.title}-${id}`}>
+                  <Image
+                    width={200}
+                    height={200}
+                    src={award.img}
+                    alt={award.title}
+                    className="h-60 w-full rounded-lg object-cover object-top"
+                  />
+                </motion.div>
+                <div className="flex justify-center items-center flex-col">
+                  <motion.h3
+                    layoutId={`title-${award.title}-${id}`}
+                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  >
+                    {award.title}
+                  </motion.h3>
+                  <motion.p
+                    layoutId={`description-${award.description}-${id}`}
+                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  >
+                    {award.description}
+                  </motion.p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </ul>
+            </motion.div>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }
@@ -172,7 +181,6 @@ export const CloseIcon = () => {
           duration: 0.05,
         },
       }}
-      xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"

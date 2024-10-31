@@ -11,13 +11,15 @@ const MagicButton = ({
   otherClasses,
   isLoading,
   isSubmitted,
+  layoutId, // Added layoutId prop
 }: {
   title: string;
-  icon: React.ReactNode;
-  position: string;
+  icon?: React.ReactNode; // Made icon optional if not always needed
+  position?: 'left' | 'right';
   otherClasses?: string;
   isLoading?: boolean;
   isSubmitted?: boolean;
+  layoutId?: string; // Added layoutId type
 }) => {
   return (
     <motion.button
@@ -30,6 +32,7 @@ const MagicButton = ({
         boxShadow: '0 0 6px rgba(0, 0, 0, 0.2)',
       }}
       disabled={isLoading || isSubmitted}
+      layoutId={layoutId}
     >
       <AnimatePresence mode="wait">
         {isLoading ? (

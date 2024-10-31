@@ -13,14 +13,14 @@ const RecentProjects = () => {
       id="projects"
       className="flex flex-col py-12 min-h-screen"
     >
-      <h1 className="heading">
+      <h1 className="heading mb-14">
         My Recent Projects
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <ThemeCard
-            className="flex flex-col cursor-pointer"
+            otherClasses="flex flex-col cursor-pointer"
             key={id}
           >
             {/* Image Section */}
@@ -62,7 +62,7 @@ const RecentProjects = () => {
                 title="Visit live site"
                 icon={<FaLocationArrow />}
                 position="right"
-                otherClasses="h-10 px-8 gap-2"
+                otherClasses="h-10 px-8 gap-2 rounded-lg"
               />
             </div>
           </ThemeCard>

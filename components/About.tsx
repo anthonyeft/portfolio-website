@@ -36,7 +36,7 @@ const About = () => {
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full mt-14" >
         {/* Biography Card */}
-        <ThemeCard className="col-span-3 relative bg-black-200 p-10 rounded-[50px] overflow-hidden">
+        <ThemeCard otherClasses="col-span-3 relative bg-black-200 p-10 rounded-[50px] overflow-hidden">
           <h2 className="text-2xl font-bold text-white mb-4">Biography</h2>
           <div className="text-lg text-white tracking-wide" ref={ref}>
             {startTyping && (
@@ -107,7 +107,7 @@ const About = () => {
         </ThemeCard>
 
         {/* Toolkit Card */}
-        <ThemeCard className="col-span-2">
+        <ThemeCard otherClasses="col-span-2">
           <h2 className="text-2xl font-bold text-white mb-6">My Toolkit</h2>
 
           <div className="flex flex-wrap gap-4">

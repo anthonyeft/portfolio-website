@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-center items-center pt-36 pb-20 h-screen">
       {/* Left Side - Text Content */}
-      <ThemeCard className="relative w-full lg:w-1/2 px-6 lg:px-12 bg-black-200 py-12 rounded-[50px] overflow-hidden">
+      <ThemeCard otherClasses="relative w-full lg:w-1/2 px-6 lg:px-12 bg-black-200 py-12 rounded-[50px] overflow-hidden">
         <p className="uppercase tracking-widest text-xs text-blue-100 mb-4">
           Computer Vision • AI Research • Deep Learning
         </p>

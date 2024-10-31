@@ -117,3 +117,57 @@ export const awards = [
     ),
   },
 ];
+
+export const publications = [
+  {
+    description: "Rapid screening of skin cancers with robust deep learning pipeline",
+    title: "M-SCAHN",
+    src: "project_icon.png",
+    ctaText: "View",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: `Skin cancer is the most prevalent cancer worldwide with 8 million incidences and 120,000 annual deaths. 
+      Visual inspection has a 40% misdiagnosis rate, causing treatment delays leading to increased mortality.
+      Millions are referred for unnecessary, expensive, and invasive biopsies. This project introduces a 
+      point-of-care software application for accurate, immediate, and non-invasive skin cancer screening through 
+      innovative computational analysis of lesion images: Multimodal Skin Cancer Analysis with Hybrid Networks (M-SCAHN). 
+      Using 13,500 images, this research proposes novel hierarchical CNN-transformer hybrid deep-learning models. 
+      The multimodal classification model considers patient-specific factors such as age and anatomical location 
+      in its decisions. M-SCAHN provides interpretable diagnostic reasoning through GradCAM, improves screening 
+      in diverse populations with color constancy algorithms, and instantly identifies cancerous lesion traits. 
+      Physicians can upload an image, and in 18 seconds, M-SCAHN performs end-to-end analysis, detecting cancer 
+      with state-of-the-art accuracy: 98.9% sensitivity (99% CI: 97.6% - 100%) and 97.7% specificity (99% CI: 96.2% - 99.1%). 
+      The segmentation model detects lesion borders with 95.5% Dice score, a critical step for various dermatology 
+      applications. With zero localization failures, it is the only reliable skin lesion segmentation model, 
+      facilitating a novel lesion border evolution tracking algorithm. M-SCAHN is the first of its kind to 
+      detect all major skin cancers and pre-cancer with significant accuracy, interpretability, and a solution 
+      to aid clinician diagnosis of diverse skin. This research can revolutionize skin diagnostics by reducing 
+      mortality through early detection while minimizing unnecessary biopsies and costs.`,
+  },
+];
+
+export const newsNetworks = [
+  { id: 1, src: "/network1.png", alt: "Network 1" },
+  { id: 2, src: "/network2.png", alt: "Network 2" },
+  { id: 3, src: "/network3.png", alt: "Network 3" },
+  { id: 4, src: "/network4.png", alt: "Network 4" },
+  { id: 5, src: "/network5.png", alt: "Network 5" },
+  { id: 6, src: "/network6.png", alt: "Network 6" },
+  { id: 7, src: "/network7.png", alt: "Network 7" },
+];
+
+export const newsArticles = [
+  {
+    id: 1,
+    title: "Title of News Article",
+    subheading: "Subtitle or short description of the article.",
+    img: "/article-image1.png",
+    link: "https://link-to-article.com",
+  },
+  {
+    id: 2,
+    title: "Another News Article",
+    subheading: "Another subtitle or short description.",
+    img: "/article-image2.png",
+    link: "https://link-to-article.com",
+  },
+];
