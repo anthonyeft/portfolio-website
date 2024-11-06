@@ -133,7 +133,7 @@ const Publications = () => {
               layoutId={`publication-${publication.title}-${id}`}
               key={`publication-${publication.title}-${id}`}
               onClick={() => setActive(publication)}
-              otherClasses="pt-4 pl-4 pb-4 pr-6 flex flex-col md:flex-row justify-between items-center rounded-[16px] cursor-pointer"
+              otherClasses="pt-4 pl-4 pb-4 pr-6 flex flex-col md:flex-row justify-between items-center rounded-[18px] cursor-pointer"
             >
               <div className="flex gap-4 flex-col md:flex-row ">
                 <motion.div layoutId={`image-${publication.title}-${id}`}>

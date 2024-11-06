@@ -37,7 +37,7 @@ const ThemeCard = forwardRef<HTMLDivElement, ThemeCardProps>(
     return (
       <motion.div
         ref={ref} // Forward the ref if provided
-        className={`relative bg-black-200 p-10 rounded-[50px] overflow-hidden ${otherClasses}`}
+        className={`relative bg-black-200 p-10 overflow-hidden ${otherClasses}`}
         layoutId={layoutId} // Use the layoutId for motion animations
         onClick={onClick} // Handle click events
         onMouseMove={(e) => {
@@ -53,7 +53,7 @@ const ThemeCard = forwardRef<HTMLDivElement, ThemeCardProps>(
       >
         {/* Linear Gradient (Background) */}
         <motion.div
-          className={`absolute inset-0 border border-card_border_color pointer-events-none rounded-[50px] ${roundingClasses}`}
+          className={`absolute inset-0 border border-card_border_color pointer-events-none ${roundingClasses}`}
           style={{
             maskImage: 'linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.2) 90%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.2) 90%)',
@@ -64,7 +64,7 @@ const ThemeCard = forwardRef<HTMLDivElement, ThemeCardProps>(
 
         {/* Radial Gradient (Overlay) */}
         <motion.div
-          className={`absolute inset-0 border border-[rgba(255,255,255,0.2)] pointer-events-none rounded-[50px] ${roundingClasses}`}
+          className={`absolute inset-0 border border-[rgba(255,255,255,0.2)] pointer-events-none ${roundingClasses}`}
           style={{
             maskImage: maskImage,
             WebkitMaskImage: maskImage,

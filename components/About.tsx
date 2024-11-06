@@ -64,7 +64,7 @@ const About = () => {
         </ThemeCard>
 
         {/* Interests Card */}
-        <ThemeCard>
+        <ThemeCard otherClasses="rounded-[50px]">
           <h2 className="text-2xl font-bold text-white mb-4">Interests</h2>
 
           <ul className="list-none space-y-4 text-white line-clamp-1">
@@ -88,7 +88,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-8">
 
         {/* Traits Card */}
-        <ThemeCard>
+        <ThemeCard otherClasses="rounded-[50px]">
           <h2 className="text-2xl font-bold text-white mb-4">Traits</h2>
           <ul className="list-none space-y-4 text-white line-clamp-1">
             <li className="flex items-center">
@@ -107,7 +107,7 @@ const About = () => {
         </ThemeCard>
 
         {/* Toolkit Card */}
-        <ThemeCard otherClasses="col-span-2">
+        <ThemeCard otherClasses="col-span-2 rounded-[50px]">
           <h2 className="text-2xl font-bold text-white mb-6">My Toolkit</h2>
 
           <div className="flex flex-wrap gap-4">

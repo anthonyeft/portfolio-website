@@ -146,13 +146,14 @@ export const publications = [
 ];
 
 export const newsNetworks = [
-  { id: 1, src: "/network1.png", alt: "Network 1" },
-  { id: 2, src: "/network2.png", alt: "Network 2" },
-  { id: 3, src: "/network3.png", alt: "Network 3" },
-  { id: 4, src: "/network4.png", alt: "Network 4" },
-  { id: 5, src: "/network5.png", alt: "Network 5" },
-  { id: 6, src: "/network6.png", alt: "Network 6" },
-  { id: 7, src: "/network7.png", alt: "Network 7" },
+  { src: "/network1.png", alt: "Network 1" },
+  { src: "/network2.png", alt: "Network 2" },
+  { src: "/network3.png", alt: "Network 3" },
+  { src: "/network4.png", alt: "Network 4" },
+  { src: "/network5.png", alt: "Network 5" },
+  { src: "/network6.png", alt: "Network 6" },
+  { src: "/network7.png", alt: "Network 7" },
+  { src: "/network8.png", alt: "Network 8" },
 ];
 
 export const newsArticles = [
@@ -168,6 +169,27 @@ export const newsArticles = [
     title: "Another News Article",
     subheading: "Another subtitle or short description.",
     img: "/article-image2.png",
+    link: "https://link-to-article.com",
+  },
+  {
+    id: 3,
+    title: "Another News Article",
+    subheading: "Another subtitle or short description.",
+    img: "/article-image3.png",
+    link: "https://link-to-article.com",
+  },
+  {
+    id: 4,
+    title: "Another News Article",
+    subheading: "Another subtitle or short description.",
+    img: "/article-image4.png",
+    link: "https://link-to-article.com",
+  },
+  {
+    id: 5,
+    title: "Another News Article",
+    subheading: "Another subtitle or short description.",
+    img: "/article-image5.png",
     link: "https://link-to-article.com",
   },
 ];

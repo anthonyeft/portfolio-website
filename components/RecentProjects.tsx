@@ -20,7 +20,7 @@ const RecentProjects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <ThemeCard
-            otherClasses="flex flex-col cursor-pointer"
+            otherClasses="flex flex-col cursor-pointer rounded-[50px]"
             key={id}
           >
             {/* Image Section */}
