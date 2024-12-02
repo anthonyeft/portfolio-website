@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="w-full flex justify-center items-center py-20"
+      className="w-full flex justify-center items-center h-screen"
       initial={{
         opacity: 0,
       }}
@@ -56,9 +56,6 @@ const Contact = () => {
       }}
       transition={{
         duration: 1,
-      }}
-      viewport={{
-        once: true,
       }}
     >
       <div className="flex flex-col w-full items-center">

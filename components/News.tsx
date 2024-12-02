@@ -24,39 +24,35 @@ const News = () => {
 
   return (
     <section id="news" className="flex flex-col py-12">
-      <h1 className="heading mb-8">News</h1>
+      <h1 className="heading mb-14">News</h1>
 
       {/* News Network Logos Carousel */}
-      <div className="relative flex flex-col items-center py-6 mb-10">
-        <h2 className="heading mb-4">Featured In</h2>
-        <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-          <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start">
-            {newsNetworks.map((logo, index) => (
-              <li key={index} className="mx-12">
-                <img src={logo.src} alt={logo.alt} className="max-w-none" />
-              </li>
-            ))}
-          </ul>
-          <ul
-            className="flex animate-infinite-scroll items-center justify-center md:justify-start"
-            aria-hidden="true"
-          >
-            {newsNetworks.map((logo, index) => (
-              <li key={index} className="mx-12">
-                <img src={logo.src} alt={logo.alt} className="max-w-none" />
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-14">
+        <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start">
+          {newsNetworks.map((logo, index) => (
+            <li key={index} className="mx-12">
+              <img src={logo.src} alt={logo.alt} className="max-w-none" />
+            </li>
+          ))}
+        </ul>
+        <ul
+          className="flex animate-infinite-scroll items-center justify-center md:justify-start"
+          aria-hidden="true"
+        >
+          {newsNetworks.map((logo, index) => (
+            <li key={index} className="mx-12">
+              <img src={logo.src} alt={logo.alt} className="max-w-none" />
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* News Articles Carousel */}
-      <h2 className="heading mb-6 text-center">Recent Articles</h2>
       <div className="relative flex justify-center items-center space-x-4 w-full">
         {/* Left Arrow */}
         <button
           onClick={handlePrev}
-          className={`p-2 bg-neutral-800 rounded-full hover:bg-neutral-700 ${
+          className={`p-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition-color duration-200 ${
             currentIndex === 0 ? "opacity-0 pointer-events-none" : ""
           }`}
         >
@@ -64,14 +60,14 @@ const News = () => {
         </button>
 
         {/* Articles */}
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden w-full [mask-image:_linear-gradient(to_right,black_0,_black_calc(100%-128px),transparent_100%)]">
           <motion.div
             className="flex space-x-4"
             style={{
               width: `${newsArticles.length * 300}px`, // Ensure space for all items
             }}
             animate={{ x: -currentIndex * 300 }}
-            transition={{ type: "spring", stiffness: 50 }}
+            transition={{ type: "spring", stiffness: 40 }}
           >
             {newsArticles.map(({ id, title, subheading, img, link }) => (
               <ThemeCard key={id} otherClasses="w-[300px] flex flex-col p-4 rounded-[28px]">
@@ -103,7 +99,7 @@ const News = () => {
         {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className={`p-2 bg-neutral-800 rounded-full hover:bg-neutral-700 ${
+          className={`p-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition-color duration-200 ${
             currentIndex >= newsArticles.length - 3 ? "opacity-0 pointer-events-none" : ""
           }`}
         >

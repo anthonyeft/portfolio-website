@@ -53,16 +53,16 @@ const RecentProjects = () => {
                   style={{ transform: `translateX(-${5 * index + 2}px)` }}
                   whileHover={{ borderColor: "rgba(255, 255, 255, 0.6)" }}
                 >
-                  <img src={icon} alt={`icon-${index}`} className="p-2" />
+                  {icon}
                 </motion.div>
                 ))}
               </div>
 
               <MagicButton
-                title="Visit live site"
+                title="Visit site"
                 icon={<FaLocationArrow />}
                 position="right"
-                otherClasses="h-10 px-8 gap-2 rounded-lg"
+                otherClasses="h-10 px-8 gap-2"
               />
             </div>
           </ThemeCard>

@@ -37,7 +37,6 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        // Removed `initial`, `animate`, and `transition` to prevent animation on load
         animate={{
           y: visible ? 0 : -100,
           opacity: visible ? 1 : 0,

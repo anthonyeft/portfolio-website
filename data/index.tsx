@@ -1,4 +1,4 @@
-import { FaReact, FaPython, FaNodeJs, FaDatabase} from "react-icons/fa";
+import { SiNumpy, SiTensorflow, SiTailwindcss, SiPytorch, SiScikitlearn, SiNextdotjs, SiFramer, SiPython, SiReact} from "react-icons/si";
 
 
 export const navItems = [
@@ -12,47 +12,31 @@ export const navItems = [
 ];
 
 export const tools = [
-  { name: "React", icon: <FaReact className="text-blue-400 w-5 h-5" />, inProgress: false },
-  { name: "Python", icon: <FaPython className="text-green-400 w-5 h-5" />, inProgress: false },
-  { name: "Node.js", icon: <FaNodeJs className="text-lime-400 w-5 h-5" />, inProgress: false },
-  { name: "SQL/Databases", icon: <FaDatabase className="text-orange-400 w-5 h-5" />, inProgress: false },
-  { name: "Next.js", icon: <FaReact className="text-white w-5 h-5" />, inProgress: true },
-  { name: "TensorFlow", icon: <FaPython className="text-white w-5 h-5" />, inProgress: true },
+  { name: "Python", icon: <SiPython className="text-[#fee05a] w-5 h-5" />, inProgress: false },
+  { name: "NumPy", icon: <SiNumpy className="text-blue-400 w-5 h-5" />, inProgress: false },
+  { name: "PyTorch", icon: <SiPytorch className="text-orange-600 w-5 h-5" />, inProgress: false },
+  { name: "Tensorflow", icon: <SiTensorflow className="text-orange-400 w-5 h-5" />, inProgress: false },
+  { name: "Scikit-learn", icon: <SiScikitlearn className="text-blue-400 w-5 h-5" />, inProgress: false },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#17bab9] w-5 h-5" />, inProgress: false },
+  { name: "React", icon: <SiReact className="text-blue-400 w-5 h-5" />, inProgress: true },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white w-5 h-5" />, inProgress: true },
+  { name: "Framer Motion", icon: <SiFramer className="text-white w-5 h-5" />, inProgress: true },
 ];
 
 
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
-  },
-  {
-    id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Rapid Screening of Skin Cancers with M-SCAHN",
+    des: "My award winning science fair project that uses deep learning to screen for skin cancers in dermoscopy images.",
+    img: "/project_icon.png",
+    iconLists: [
+      <SiNumpy className="text-blue-400"/>,
+      <SiPytorch className="text-orange-600"/>,
+      <SiScikitlearn className="text-blue-400"/>,
+      <SiPython className="text-[#fee05a]"/>,
+    ],
+    link: "https://partner.projectboard.world/isef/project/robo062-rapid-screening-of-skin-cancers-with-m-scahn",
   },
 ];
 
@@ -160,35 +144,33 @@ export const newsArticles = [
   {
     id: 1,
     title: "Title of News Article",
-    subheading: "Subtitle or short description of the article.",
     img: "/article-image1.png",
+    subheading: "",
     link: "https://link-to-article.com",
   },
   {
     id: 2,
-    title: "Another News Article",
-    subheading: "Another subtitle or short description.",
-    img: "/article-image2.png",
-    link: "https://link-to-article.com",
+    title: "Anthony Efthimiadis Wins 1st in World Grand Award at Regeneron Int’l Science Fair",
+    img: "/national-herald.jpg",
+    subheading: "The National Herald",
+    link: "https://www.thenationalherald.com/anthony-efthimiadis-wins-1st-in-world-grand-award-at-regeneron-intl-science-fair/",
   },
   {
     id: 3,
     title: "Another News Article",
-    subheading: "Another subtitle or short description.",
     img: "/article-image3.png",
-    link: "https://link-to-article.com",
+    subheading: "Greek Reporter",
+    link: "https://greekreporter.com/2024/05/21/greek-canadian-student-wins-regeneron-international-science-fair/",
   },
   {
     id: 4,
     title: "Another News Article",
-    subheading: "Another subtitle or short description.",
     img: "/article-image4.png",
     link: "https://link-to-article.com",
   },
   {
     id: 5,
     title: "Another News Article",
-    subheading: "Another subtitle or short description.",
     img: "/article-image5.png",
     link: "https://link-to-article.com",
   },

@@ -121,9 +121,7 @@ const Awards = () => {
         id="awards"
         className="flex flex-col py-12"
       >
-        <h1 className="heading mb-14">
-          Awards
-        </h1>
+        <h1 className="heading mb-14">Awards</h1>
 
         <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-4 items-start gap-4">
           {awards.map((award, index) => (
