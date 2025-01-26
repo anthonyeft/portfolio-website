@@ -62,11 +62,15 @@ export const awards = [
     img: "/award3.jpg",
     content: () => (
       <>
-        <p>Achievements in Grade 9:</p>
+        <p>Awards in Grade 9:</p>
         <ul className="list-disc pl-5">
-          <li>Participated in BASEF and ISEF</li>
-          <li>Won multiple category awards</li>
-          <li>Continued research in AI-based diagnostics</li>
+          <li>International Science & Engineering Fair (ISEF 2024) - First Place Grand Award</li>
+          <li>BASEF 2024 - Primary Fluid Systems Pinnacle Best in Fair Award</li>
+          <li>U.S. Agency for International Development (USAID) Award</li>
+          <li>ArcelorMittal Dofasco Information Systems Award</li>
+          <li>Hamilton Academy of Dentistry Award - First Place</li>
+          <li>McMaster Farncombe Family Digestive Health Research Institute Grand Award</li>
+          <li>Ola Lunyk-Child Memorial Health Science Award - First Place</li>
         </ul>
       </>
     ),
@@ -79,9 +83,16 @@ export const awards = [
       <>
         <p>Achievements in Grade 8:</p>
         <ul className="list-disc pl-5">
-          <li>Best Junior Project at BASEF 2023</li>
-          <li>Silver Merit Award at CWSF 2023</li>
-          <li>ETFO Math & Science Award: Top Student (Grade 8)</li>
+          <li>Western University Entrance Scholarship</li>
+          <li>University of Alberta Entrance Scholarship</li>
+          <li>Canada-Wide Science Fair - Silver</li>
+          <li>Elementary Teachers’ Federation of Ontario (ETFO) Top Student in Math & Science</li>
+          <li>BASEF 2023 Best Junior Project</li>
+          <li>Primary Fluid Systems Pinnacle 3rd Best in Fair Award</li>
+          <li>McMaster Farncombe Family Digestive Health Research Award</li>
+          <li>Hamilton Academy of Dentistry Award</li>
+          <li>Hillfield Strathallan College Entrance Scholarship</li>
+          <li>Ola Lunyk-Child Memorial Health Science Award – First</li>
         </ul>
       </>
     ),
@@ -94,8 +105,10 @@ export const awards = [
       <>
         <p>Achievements in Grade 7:</p>
         <ul className="list-disc pl-5">
-          <li>Participated in BASEF</li>
-          <li>Gained foundational experience in science fairs</li>
+          <li>BASEF - Bronze</li>
+          <li>ArcelorMittal Dofasco Process Automation Award</li>
+          <li>Sheridan College Entrance Scholarship</li>
+          <li>Talkit.ca Computer Engineering Award </li>
         </ul>
       </>
     ),
