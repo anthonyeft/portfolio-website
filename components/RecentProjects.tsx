@@ -9,13 +9,8 @@ import MagicButton from "./ui/MagicButton";
 
 const RecentProjects = () => {
   return (
-    <section
-      id="projects"
-      className="flex flex-col py-12 min-h-screen"
-    >
-      <h1 className="heading mb-14">
-        My Recent Projects
-      </h1>
+    <section id="projects" className="flex flex-col py-12 min-h-screen">
+      <h1 className="heading mb-14">My Recent Projects</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
@@ -24,22 +19,19 @@ const RecentProjects = () => {
             key={id}
           >
             {/* Image Section */}
-            <div className="relative flex overflow-hidden mb-5">
-              <div
-                className="relative rounded-[25px] bg-slate-900"
-              >
-                <img src="/bg.png" alt="bgimg" />
-              </div>
+            <div className="relative flex overflow-hidden mb-5 rounded-[25px] bg-slate-900">
+              <img
+                src={img}
+                alt={title}
+                className="w-full h-full object-cover rounded-[25px] max-h-90"
+              />
             </div>
 
             {/* Title */}
             <h1 className="font-bold text-lg line-clamp-1">{title}</h1>
 
             {/* Description */}
-            <p
-              className="text-lg line-clamp-2"
-              style={{ color: "#BEC1DD" }}
-            >
+            <p className="text-lg line-clamp-2" style={{ color: "#BEC1DD" }}>
               {des}
             </p>
 
@@ -47,23 +39,25 @@ const RecentProjects = () => {
             <div className="flex items-center justify-between mt-5">
               <div className="flex items-center">
                 {iconLists.map((icon, index) => (
-                <motion.div
-                  key={index}
-                  className="border border-white/20 rounded-full bg-black-100 w-10 h-10 flex justify-center items-center"
-                  style={{ transform: `translateX(-${5 * index + 2}px)` }}
-                  whileHover={{ borderColor: "rgba(255, 255, 255, 0.6)" }}
-                >
-                  {icon}
-                </motion.div>
+                  <motion.div
+                    key={index}
+                    className="border border-white/20 rounded-full bg-black-100 w-10 h-10 flex justify-center items-center"
+                    style={{ transform: `translateX(-${5 * index + 2}px)` }}
+                    whileHover={{ borderColor: "rgba(255, 255, 255, 0.6)" }}
+                  >
+                    {icon}
+                  </motion.div>
                 ))}
               </div>
 
-              <MagicButton
-                title="Visit site"
-                icon={<FaLocationArrow />}
-                position="right"
-                otherClasses="h-10 px-8 gap-2"
-              />
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <MagicButton
+                  title="Visit site"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                  otherClasses="h-10 px-8 gap-2"
+                />
+              </a>
             </div>
           </ThemeCard>
         ))}
