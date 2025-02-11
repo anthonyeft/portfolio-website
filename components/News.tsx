@@ -70,20 +70,20 @@ const News = () => {
             transition={{ type: "spring", stiffness: 40 }}
           >
             {newsArticles.map(({ id, title, subheading, img, link }) => (
-              <ThemeCard key={id} otherClasses="w-[300px] flex flex-col p-4 rounded-[28px]">
+              <ThemeCard key={id} otherClasses="w-[300px] flex flex-col p-4 rounded-3xl">
                 {/* Image Section */}
-                <div className="relative h-40 rounded-lg overflow-hidden mb-4">
+                <div className="relative h-40 rounded-xl overflow-hidden mb-4">
                   <img src={img} alt={title} className="w-full h-full object-cover" />
                 </div>
 
                 {/* Title */}
-                <h3 className="font-bold text-lg mb-2 line-clamp-1">{title}</h3>
+                <h3 className="font-bold text-sm mb-2 line-clamp-2">{title}</h3>
 
                 {/* Subheading */}
                 <p className="text-sm mb-4 text-neutral-500 line-clamp-2">{subheading}</p>
 
                 {/* Read More Button */}
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-auto">
                   <a href={link} target="_blank" rel="noopener noreferrer">
                     <MagicButton
                       title="Read More"
