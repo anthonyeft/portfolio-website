@@ -5,7 +5,6 @@ export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Awards", link: "#awards" },
-  { name: "Publications", link: "#publications" },
   { name: "Talks", link: "#talks" },
   { name: "News", link: "#news" },
   { name: "Contact", link: "#contact" },
@@ -49,9 +48,8 @@ export const awards = [
       <>
         <p>Achievements in Grade 10:</p>
         <ul className="list-disc pl-5">
-          <li>First Place Grand Award at ISEF 2024</li>
-          <li>Pinnacle Best in Fair Award at BASEF 2024</li>
-          <li>Developed "Rapid Screening of Skin Cancers with M-SCAHN"</li>
+          <li>Inducted into Sigma Xi - The Scientific Research Honor Society</li>
+          <li>Invited to Present at the 2024 International Symposium on High School Research by the American Chemical Society - Southern California Section (SCALACS)</li>
         </ul>
       </>
     ),
@@ -156,35 +154,37 @@ export const newsNetworks = [
 export const newsArticles = [
   {
     id: 1,
-    title: "Title of News Article",
-    img: "/article-image1.png",
-    subheading: "",
-    link: "https://link-to-article.com",
+    title: "Here and Now Toronto",
+    img: "/cbc_interview_room.jpg",
+    subheading: "CBC Radio Canada",
+    link: "https://www.cbc.ca/listen/live-radio/1-82-here-and-now-toronto/clip/16083836-here-now-hands-show-kids.-meet-two-aspiring",
   },
   {
     id: 2,
+    title: "Greek Canadian Student Wins at Regeneron International Science Fair",
+    subheading: "Greek Reporter",
+    img: "/national-herald.jpg",
+    link: "https://greekreporter.com/2024/05/21/greek-canadian-student-wins-regeneron-international-science-fair/",
+  },
+  {
+    id: 3,
+    title: "Project on detecting skin cancer earns Oakville student top international science prize",
+    img: "/award3.jpg",
+    subheading: "INhalton",
+    link: "https://halton.insauga.com/project-on-detecting-skin-cancer-earns-oakville-student-top-international-science-prize",
+  },
+  {
+    id: 4,
+    title: "Young local scientists win big at international science fair",
+    img: "/scientists.jpg",
+    subheading: "Oakville News",
+    link: "https://www.oakvillenews.org/local-news/young-ontario-scientists-on-top-of-the-world-8766018",
+  },
+  {
+    id: 5,
     title: "Anthony Efthimiadis Wins 1st in World Grand Award at Regeneron Int’l Science Fair",
     img: "/national-herald.jpg",
     subheading: "The National Herald",
     link: "https://www.thenationalherald.com/anthony-efthimiadis-wins-1st-in-world-grand-award-at-regeneron-intl-science-fair/",
-  },
-  {
-    id: 3,
-    title: "Another News Article",
-    img: "/article-image3.png",
-    subheading: "Greek Reporter",
-    link: "https://greekreporter.com/2024/05/21/greek-canadian-student-wins-regeneron-international-science-fair/",
-  },
-  {
-    id: 4,
-    title: "Another News Article",
-    img: "/article-image4.png",
-    link: "https://link-to-article.com",
-  },
-  {
-    id: 5,
-    title: "Another News Article",
-    img: "/article-image5.png",
-    link: "https://link-to-article.com",
   },
 ];
