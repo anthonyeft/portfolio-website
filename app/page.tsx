@@ -18,7 +18,7 @@ export default function Home() {
         <About />
         <RecentProjects />
         <Awards />
-        <Publications />
+        {/* <Publications /> */}
         <News />
         <Contact />
       </div>
