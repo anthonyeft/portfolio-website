@@ -1,13 +1,19 @@
 // app/page.tsx
+import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import RecentProjects from "@/components/RecentProjects";
-import Awards from "@/components/Awards";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data/index.tsx";
-import Publications from "@/components/Publications";
-import News from "@/components/News";
-import Contact from "@/components/Contact";
+
+// Lazy load components that aren't immediately visible
+const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
+  loading: () => <div className="h-96 w-full bg-black-100 animate-pulse"></div>,
+  ssr: true,
+});
+
+const Awards = dynamic(() => import("@/components/Awards"));
+const News = dynamic(() => import("@/components/News"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
   return (
@@ -18,7 +24,6 @@ export default function Home() {
         <About />
         <RecentProjects />
         <Awards />
-        {/* <Publications /> */}
         <News />
         <Contact />
       </div>
