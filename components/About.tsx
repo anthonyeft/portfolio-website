@@ -30,30 +30,33 @@ const About = () => {
         {/* Biography Card */}
         <ThemeCard otherClasses="col-span-3 relative bg-black-200 p-10 rounded-[50px] overflow-hidden">
           <h2 className="text-2xl font-bold text-white mb-4">Biography</h2>
-          <div className="text-lg text-white leading-relaxed tracking-wide" ref={ref}>
-            <div className="flex items-center gap-2 my-4">
+            <div
+            className="text-lg text-white leading-relaxed tracking-wide"
+            ref={ref}
+            >
+            <div className="flex items-center gap-2 mt-4 mb-0">
               <p>
-                I am a sophomore at Oakville Trafalgar H.S. with a passion for {" "}
+              Sophomore at Oakville Trafalgar H.S. with a passion for{" "}
               </p>
               <Typewriter
-                options={{
-                  strings: [
-                    "AI in biomedical research.",
-                    "continuous learning.",
-                    "problem solving.",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 50,
-                  delay: 75,
-                }}
+              options={{
+                strings: [
+                "AI in healthcare.",
+                "continuous learning.",
+                "problem solving.",
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                delay: 75,
+              }}
               />
             </div>
             
             <p className="text-justify">
               I specialize in developing accurate and efficient image processing and deep learning pipelines for rapid disease screening. Recently, my research has garnered awards, most notably the First Place Grand Award in Robotics and Intelligent Machines at the International Science & Engineering Fair. My project developed a deep learning pipeline for skin cancer detection.
             </p>
-          </div>
+            </div>
         </ThemeCard>
 
         {/* Interests Card */}
