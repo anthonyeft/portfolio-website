@@ -141,7 +141,7 @@ export const publications = [
 ];
 
 export const newsNetworks = [
-  { src: "/network1.png", alt: "Network 1" },
+  { src: "/cbc-listen-logo.png", alt: "Network 1" },
   { src: "/network2.png", alt: "Network 2" },
   { src: "/network3.png", alt: "Network 3" },
   { src: "/network4.png", alt: "Network 4" },
