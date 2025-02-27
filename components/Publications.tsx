@@ -6,6 +6,7 @@ import { useOutsideClick } from "./ui/hooks/use-outside-click";
 import { publications } from "@/data";
 import MagicButton from "./ui/MagicButton";
 import ThemeCard from "./ui/ThemeCard";
+import Image from 'next/image';
 
 const Publications = () => {
   const [active, setActive] = useState<(typeof publications)[number] | boolean | null>(null);
@@ -54,9 +55,12 @@ const Publications = () => {
               <motion.div
                 layoutId={`image-${active.title}-${id}`}
               >
-                <img
+                <Image
                   src={active.src}
                   alt={active.title}
+                  width={800}
+                  height={600}
+                  priority={true}
                   className="w-full h-60 rounded-tr-lg rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
@@ -137,9 +141,12 @@ const Publications = () => {
             >
               <div className="flex gap-4 flex-col md:flex-row ">
                 <motion.div layoutId={`image-${publication.title}-${id}`}>
-                  <img
+                  <Image
                     src={publication.src}
                     alt="Coming Soon"
+                    width={800}
+                    height={600}
+                    priority={false}
                     className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top text-base"
                   />
                 </motion.div>

@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import ThemeCard from "./ui/ThemeCard";
 import MagicButton from "./ui/MagicButton";
 import { newsNetworks, newsArticles } from "@/data/index.tsx";
+import Image from 'next/image';
 
 const News = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,9 +31,9 @@ const News = () => {
       <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-14">
         <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start">
           {newsNetworks.map((logo, index) => (
-            <li key={index} className="mx-12">
-              <img src={logo.src} alt={logo.alt} className="max-w-none" />
-            </li>
+        <li key={index} className="mx-12">
+          <Image src={logo.src} alt={logo.alt} width={40} height={40} className="max-w-none w-10 h-10 object-contain" />
+        </li>
           ))}
         </ul>
         <ul
@@ -40,9 +41,9 @@ const News = () => {
           aria-hidden="true"
         >
           {newsNetworks.map((logo, index) => (
-            <li key={index} className="mx-12">
-              <img src={logo.src} alt={logo.alt} className="max-w-none" />
-            </li>
+        <li key={index} className="mx-12">
+          <Image src={logo.src} alt={logo.alt} width={40} height={40} className="max-w-none w-10 h-10 object-contain" />
+        </li>
           ))}
         </ul>
       </div>
@@ -73,7 +74,7 @@ const News = () => {
               <ThemeCard key={id} otherClasses="w-[300px] flex flex-col p-4 rounded-3xl">
                 {/* Image Section */}
                 <div className="relative h-40 rounded-xl overflow-hidden mb-4">
-                  <img src={img} alt={title} className="w-full h-full object-cover" />
+                  <Image src={img} alt={title} width={300} height={160} className="w-full h-full object-cover" />
                 </div>
 
                 {/* Title */}

@@ -6,6 +6,7 @@ import { projects } from "@/data/index.tsx";
 import { motion } from "framer-motion";
 import ThemeCard from "./ui/ThemeCard";
 import MagicButton from "./ui/MagicButton";
+import Image from 'next/image';
 
 const RecentProjects = () => {
   return (
@@ -20,9 +21,13 @@ const RecentProjects = () => {
           >
             {/* Image Section */}
             <div className="relative flex overflow-hidden mb-5 rounded-[25px] bg-slate-900">
-              <img
+              <Image
                 src={img}
                 alt={title}
+                width={800}
+                height={600}
+                priority={true} // Use priority for above-fold images
+                loading="lazy" // For below-fold images
                 className="w-full h-full object-cover rounded-[25px] max-h-90"
               />
             </div>

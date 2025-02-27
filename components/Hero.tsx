@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import ThemeCard from "./ui/ThemeCard";
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -20,10 +21,9 @@ const Hero = () => {
         />
 
         <p className="text-sm md:text-lg lg:text-xl text-gray-400 mb-8">
-          High school student and passionate researcher from Toronto,
-          specializing in biomedical AI and disruptive innovation. Dedicated to
-          solving global health challenges through advanced machine learning
-          techniques.
+          High school student and AI researcher from Toronto,
+          specializing in deep learning for medical imaging. Dedicated to
+          solving global health challenges through machine learning.
         </p>
 
         <a href="#about">
@@ -40,10 +40,13 @@ const Hero = () => {
       <div className="lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple rounded-full transform" />
-          <img
+          <Image
             src="/transparent-award-image.png"
+            width={450}
+            height={450}
             alt="Anthony Efthimiadis"
-            className="relative rounded-full w-[450px] h-[450px] object-cover shadow-lg"
+            priority={true}
+            className="relative rounded-full object-cover shadow-lg"
           />
         </div>
       </div>
