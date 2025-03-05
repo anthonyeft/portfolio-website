@@ -11,6 +11,8 @@ import Image from 'next/image';
 const News = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const duplicatedLogos = [...newsNetworks, ...newsNetworks];
+
   const handleNext = () => {
     if (currentIndex < newsArticles.length - 3) {
       setCurrentIndex(currentIndex + 1);
@@ -27,25 +29,20 @@ const News = () => {
     <section id="news" className="flex flex-col py-12">
       <h1 className="heading mb-14">News</h1>
 
-      {/* News Network Logos Carousel */}
-      <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-14">
-        <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start">
-          {newsNetworks.map((logo, index) => (
-        <li key={index} className="mx-12">
-          <Image src={logo.src} alt={logo.alt} width={40} height={40} className="max-w-none w-10 h-10 object-contain" />
-        </li>
+      <div className="overflow-hidden h-10 mb-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
+        <div className="flex animate-scroll h-full">
+          {duplicatedLogos.map((logo, index) => (
+            <div key={index} className="mr-10 flex-shrink-0 flex items-center h-full">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+                className="object-contain max-h-full w-auto"
+              />
+            </div>
           ))}
-        </ul>
-        <ul
-          className="flex animate-infinite-scroll items-center justify-center md:justify-start"
-          aria-hidden="true"
-        >
-          {newsNetworks.map((logo, index) => (
-        <li key={index} className="mx-12">
-          <Image src={logo.src} alt={logo.alt} width={40} height={40} className="max-w-none w-10 h-10 object-contain" />
-        </li>
-          ))}
-        </ul>
+        </div>
       </div>
 
       {/* News Articles Carousel */}
