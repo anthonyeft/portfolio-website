@@ -26,7 +26,6 @@ const RecentProjects = () => {
                 alt={title}
                 width={800}
                 height={600}
-                priority={true} // Use priority for above-fold images
                 loading="lazy" // For below-fold images
                 className="w-full h-full object-cover rounded-[25px] max-h-90"
               />
