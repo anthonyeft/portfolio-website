@@ -150,9 +150,8 @@ const config = {
           },
         },
         scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
       animation: {
@@ -166,8 +165,7 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll: 'scroll 22s linear infinite',
       },
     },
   },
