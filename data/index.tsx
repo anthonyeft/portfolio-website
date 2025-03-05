@@ -1,4 +1,4 @@
-import { SiNumpy, SiTensorflow, SiTailwindcss, SiPytorch, SiScikitlearn, SiNextdotjs, SiFramer, SiPython, SiReact} from "react-icons/si";
+import { SiNumpy, SiTensorflow, SiTailwindcss, SiPytorch, SiScikitlearn, SiNextdotjs, SiPython, SiReact} from "react-icons/si";
 
 
 export const navItems = [
@@ -19,7 +19,6 @@ export const tools = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#17bab9] w-5 h-5" />, inProgress: false },
   { name: "React", icon: <SiReact className="text-blue-400 w-5 h-5" />, inProgress: true },
   { name: "Next.js", icon: <SiNextdotjs className="text-white w-5 h-5" />, inProgress: true },
-  { name: "Framer Motion", icon: <SiFramer className="text-white w-5 h-5" />, inProgress: true },
 ];
 
 
