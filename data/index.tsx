@@ -141,14 +141,14 @@ export const publications = [
 ];
 
 export const newsNetworks = [
-  { src: "/cbc-listen-logo.png", alt: "Network 1" },
-  { src: "/network2.png", alt: "Network 2" },
-  { src: "/network3.png", alt: "Network 3" },
-  { src: "/network4.png", alt: "Network 4" },
-  { src: "/network5.png", alt: "Network 5" },
-  { src: "/network6.png", alt: "Network 6" },
-  { src: "/network7.png", alt: "Network 7" },
-  { src: "/network8.png", alt: "Network 8" },
+  { src: "/cbc-listen-logo.png", alt: "Network 1", width: 1347, height: 167 },
+  { src: "/inhalton-logo.webp", alt: "Network 2", width: 315, height: 125 },
+  { src: "/insauga-logo.webp", alt: "Network 3", width: 315, height: 125 },
+  { src: "/oakville-news-logo.png", alt: "Network 4", width: 1200, height: 150 },
+  { src: "/greek-reporter-logo.png", alt: "Network 5", width: 1200, height: 150 },
+  { src: "/network6.png", alt: "Network 6", width: 1200, height: 150 },
+  { src: "/network7.png", alt: "Network 7", width: 1200, height: 150 },
+  { src: "/network8.png", alt: "Network 8", width: 1200, height: 150 },
 ];
 
 export const newsArticles = [
