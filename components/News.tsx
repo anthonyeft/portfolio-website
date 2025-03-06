@@ -32,13 +32,13 @@ const News = () => {
       <div className="overflow-hidden h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
         <div className="flex animate-scroll h-full">
           {duplicatedLogos.map((logo, index) => (
-            <div key={index} className="mr-12 flex-shrink-0 flex items-center h-full">
+            <div key={index} className="flex-shrink-0 flex items-center h-full">
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={logo.width}
                 height={logo.height}
-                className="object-contain max-h-full w-auto"
+                className="object-contain max-h-full w-auto mr-12"
               />
             </div>
           ))}
