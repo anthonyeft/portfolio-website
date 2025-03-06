@@ -27,12 +27,12 @@ const News = () => {
 
   return (
     <section id="news" className="flex flex-col py-12">
-      <h1 className="heading mb-14">News</h1>
+      <h1 className="heading mb-16">News</h1>
 
-      <div className="overflow-hidden h-10 mb-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
+      <div className="overflow-hidden h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
         <div className="flex animate-scroll h-full">
           {duplicatedLogos.map((logo, index) => (
-            <div key={index} className="mr-10 flex-shrink-0 flex items-center h-full">
+            <div key={index} className="mr-12 flex-shrink-0 flex items-center h-full">
               <Image
                 src={logo.src}
                 alt={logo.alt}
@@ -62,7 +62,7 @@ const News = () => {
           <motion.div
             className="flex space-x-4"
             style={{
-              width: `${newsArticles.length * 300}px`, // Ensure space for all items
+              width: `${newsArticles.length * 300}px`,
             }}
             animate={{ x: -currentIndex * 300 }}
             transition={{ type: "spring", stiffness: 40 }}
