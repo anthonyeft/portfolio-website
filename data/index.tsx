@@ -48,7 +48,7 @@ export const awards = [
         <p>Achievements in Grade 10:</p>
         <ul className="list-disc pl-5">
           <li>Inducted into Sigma Xi - The Scientific Research Honor Society</li>
-          <li>Invited to Present at the 2024 International Symposium on High School Research by the American Chemical Society - Southern California Section (SCALACS)</li>
+          <li>Invited presenter at the 2024 International Symposium on High School Research by the American Chemical Society - Southern California Section (SCALACS)</li>
         </ul>
       </>
     ),
@@ -145,9 +145,9 @@ export const newsNetworks = [
   { src: "/insauga-logo.webp", alt: "Network 3", width: 315, height: 125 },
   { src: "/oakville-news-logo.png", alt: "Network 4", width: 1200, height: 150 },
   { src: "/greek-reporter-logo.png", alt: "Network 5", width: 1200, height: 150 },
-  { src: "/network6.png", alt: "Network 6", width: 1200, height: 150 },
-  { src: "/network7.png", alt: "Network 7", width: 1200, height: 150 },
-  { src: "/network8.png", alt: "Network 8", width: 1200, height: 150 },
+  { src: "/pelham-today-logo.png", alt: "Network 6", width: 1200, height: 150 },
+  { src: "/bay-observer-logo.png", alt: "Network 7", width: 1200, height: 150 },
+  { src: "/enc-logo-white.png", alt: "Network 8", width: 1200, height: 150 },
 ];
 
 export const newsArticles = [
