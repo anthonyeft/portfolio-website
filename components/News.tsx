@@ -11,7 +11,7 @@ import Image from 'next/image';
 const News = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const duplicatedLogos = [...newsNetworks, ...newsNetworks];
+  const duplicatedLogos = [...newsNetworks, ...newsNetworks, ...newsNetworks];
 
   const handleNext = () => {
     if (currentIndex < newsArticles.length - 3) {
@@ -29,16 +29,16 @@ const News = () => {
     <section id="news" className="flex flex-col py-12">
       <h1 className="heading mb-16">News</h1>
 
-      <div className="overflow-hidden h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
-        <div className="flex animate-scroll h-full">
+      <div className="w-full overflow-hidden relative h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
+        <div className="flex w-max animate-scroll h-full">
           {duplicatedLogos.map((logo, index) => (
-            <div key={index} className="flex-shrink-0 flex items-center h-full">
+            <div key={index} className="flex-shrink-0 mx-5 items-center h-full">
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={logo.width}
                 height={logo.height}
-                className="object-contain max-h-full w-auto mr-12"
+                className="object-contain h-full w-auto"
               />
             </div>
           ))}
