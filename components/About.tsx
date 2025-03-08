@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { Tooltip } from "react-tooltip";
 import { FaBrain, FaBolt, FaTrophy, FaImage } from "react-icons/fa";
 

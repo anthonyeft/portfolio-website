@@ -1,4 +1,5 @@
-import { SiNumpy, SiTensorflow, SiTailwindcss, SiPytorch, SiScikitlearn, SiNextdotjs, SiPython, SiReact} from "react-icons/si";
+import { SiNumpy, SiCss3, SiPytorch, SiScikitlearn, SiNextdotjs, SiPython, SiReact, SiOpencv, SiHtml5} from "react-icons/si";
+import { FaJava } from "react-icons/fa"
 
 
 export const navItems = [
@@ -12,13 +13,15 @@ export const navItems = [
 
 export const tools = [
   { name: "Python", icon: <SiPython className="text-[#fee05a] w-5 h-5" />, inProgress: false },
+  { name: "Java", icon: <FaJava className="text-[#ef8418] w-5 h-5" />, inProgress: false },
   { name: "NumPy", icon: <SiNumpy className="text-blue-400 w-5 h-5" />, inProgress: false },
   { name: "PyTorch", icon: <SiPytorch className="text-orange-600 w-5 h-5" />, inProgress: false },
-  { name: "Tensorflow", icon: <SiTensorflow className="text-orange-400 w-5 h-5" />, inProgress: false },
   { name: "Scikit-learn", icon: <SiScikitlearn className="text-blue-400 w-5 h-5" />, inProgress: false },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#17bab9] w-5 h-5" />, inProgress: false },
-  { name: "React", icon: <SiReact className="text-blue-400 w-5 h-5" />, inProgress: true },
-  { name: "Next.js", icon: <SiNextdotjs className="text-white w-5 h-5" />, inProgress: true },
+  { name: "OpenCV", icon: <SiOpencv className="text-white w-5 h-5" />, inProgress: false },
+  { name: "React", icon: <SiReact className="text-blue-400 w-5 h-5" />, inProgress: false },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white w-5 h-5" />, inProgress: false },
+  { name: "HTML", icon: <SiHtml5 className="text-orange-500 w-5 h-5" />, inProgress: false },
+  { name: "CSS", icon: <SiCss3 className="text-[#0091d4] w-5 h-5" />, inProgress: false },
 ];
 
 
@@ -33,6 +36,7 @@ export const projects = [
       <SiPytorch className="text-orange-600"/>,
       <SiScikitlearn className="text-blue-400"/>,
       <SiPython className="text-[#fee05a]"/>,
+      <SiOpencv className="text-white"/>,
     ],
     link: "https://partner.projectboard.world/isef/project/robo062-rapid-screening-of-skin-cancers-with-m-scahn",
   },
