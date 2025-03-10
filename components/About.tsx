@@ -19,7 +19,7 @@ export default function About() {
           <ThemeCard otherClasses="relative bg-black-200 p-5 lg:p-10 rounded-[1.5rem] lg:rounded-[2.8rem] overflow-hidden h-full">
             <h2 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4">Biography</h2>
 
-            <div className="text-base lg:text-lg text-white leading-relaxed tracking-wide">
+            <div className="text-sm lg:text-base text-white leading-relaxed tracking-wide">
               <div className="flex flex-wrap items-start gap-1 mt-2 lg:mt-4 mb-4">
                 <span>Student at Oakville Trafalgar H.S. with a passion for</span>
                 <span className="inline-block min-w-[180px]">
@@ -27,7 +27,7 @@ export default function About() {
                 </span>
               </div>
               <p className="text-justify">
-                I specialize in developing deep learning pipelines for rapid disease screening. My research has won awards, including the First Place Grand Award at ISEF 2024 for a deep learning pipeline for skin cancer detection.
+                Specializing in deep learning pipelines for rapid disease screening, I develop AI-driven diagnostic systems with a focus on real-world deployment. My research has earned multiple awards, including the First Place Grand Award at ISEF 2024 for a skin cancer screening software.
               </p>
             </div>
           </ThemeCard>

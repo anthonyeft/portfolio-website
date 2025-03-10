@@ -6,7 +6,6 @@ export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Awards", link: "#awards" },
-  { name: "Talks", link: "#talks" },
   { name: "News", link: "#news" },
   { name: "Contact", link: "#contact" },
 ];
@@ -46,7 +45,7 @@ export const awards = [
   {
     title: "Grade 10",
     description: "",
-    img: "/award3.jpg",
+    img: "/award4.jpg",
     content: () => (
       <>
         <p>Achievements in Grade 10:</p>
