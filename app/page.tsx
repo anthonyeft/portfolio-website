@@ -18,7 +18,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex flex-col items-center overflow-hidden">
-      <div className="w-full max-w-[85vw] lg:max-w-[68rem]">
+      <div className="w-full max-w-[90vw] lg:max-w-[68rem]">
         {/* Hide on small screens, show on md screens and above */}
         <div className="hidden md:block">
           <FloatingNav navItems={navItems} />
