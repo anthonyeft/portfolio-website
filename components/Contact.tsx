@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="w-full flex justify-center items-center h-screen"
+      className="w-full flex justify-center items-center lg:min-h-screen py-16 px-4 sm:px-6"
       initial={{
         opacity: 0,
       }}
@@ -59,19 +59,19 @@ const Contact = () => {
       }}
     >
       <div className="flex flex-col w-full items-center">
-        <h1 className="heading mb-14">
+        <h1 className="heading text-3xl sm:text-4xl mb-8 sm:mb-14">
           Contact
         </h1>
 
-        <div className="w-full max-w-4xl p-8 bg-black-200 rounded-[50px] shadow-lg relative">
+        <div className="w-full max-w-4xl p-5 sm:p-6 md:p-8 bg-black-200 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] shadow-lg relative">
           <div
-            className="absolute inset-0 border border-card_border_color rounded-[50px] pointer-events-none"
+            className="absolute inset-0 border border-card_border_color rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] pointer-events-none"
             style={{ maskImage: 'linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.2) 90%)' }}
           />
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Feel free to reach out</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 text-center">Feel free to reach out</h2>
 
           <form
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
             onSubmit={(e) => {
               e.preventDefault();
               handleSubmit(formData);
@@ -85,7 +85,7 @@ const Contact = () => {
                 required
                 onChange={handleChange}
                 maxLength={500}
-                className="w-full px-4 py-3 bg-black-300 text-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 sm:py-4 bg-black-300 text-white text-base sm:text-lg rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="relative">
@@ -96,7 +96,7 @@ const Contact = () => {
                 required
                 onChange={handleChange}
                 maxLength={500}
-                className="w-full px-4 py-3 bg-black-300 text-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 sm:py-4 bg-black-300 text-white text-base sm:text-lg rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="relative">
@@ -106,16 +106,16 @@ const Contact = () => {
                 required
                 onChange={handleChange}
                 maxLength={5000}
-                className="w-full px-4 py-3 bg-black-300 text-white rounded-2xl h-40 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 sm:py-4 bg-black-300 text-white text-base sm:text-lg rounded-xl sm:rounded-2xl h-32 sm:h-40 focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <MagicButton
                 title="Send Message"
-                icon={<FaPaperPlane />}
+                icon={<FaPaperPlane className="text-sm sm:text-base" />}
                 position="right"
-                otherClasses="h-12 md:w-56 px-7"
+                otherClasses="h-11 sm:h-12 md:h-13 w-full sm:w-auto px-5 sm:px-7 md:px-10 text-base sm:text-lg"
                 isLoading={isLoading || pending}
                 isSubmitted={isSubmitted}
               />
