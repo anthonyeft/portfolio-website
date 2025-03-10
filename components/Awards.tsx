@@ -45,7 +45,7 @@ const Awards = () => {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -69,7 +69,7 @@ const Awards = () => {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -119,38 +119,45 @@ const Awards = () => {
       </AnimatePresence>
       <section
         id="awards"
-        className="flex flex-col py-12"
+        className="flex flex-col py-12 px-4 md:px-6"
       >
-        <h1 className="heading mb-14">Awards</h1>
+        <h1 className="heading mb-8 md:mb-14">Awards</h1>
 
-        <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-4 items-start gap-4">
-          {awards.map((award, index) => (
+        {/* Replace grid with flex layout for natural wrapping */}
+        <div className="mx-auto w-full flex flex-wrap justify-center gap-4 md:gap-6">
+          {awards.map((award) => (
             <motion.div
               layoutId={`card-${award.title}-${id}`}
               key={award.title}
               onClick={() => setActive(award)}
               className="p-4 flex flex-col hover:bg-neutral-800 transition-colors duration-300 rounded-xl cursor-pointer"
+              style={{
+                width: 'calc(100% - 2rem)', // Full width on mobile with padding
+                maxWidth: '320px',          // Maximum width for any card
+                flexGrow: 0,                // Don't grow beyond maxWidth
+                flexShrink: 0,              // Don't shrink below maxWidth if possible
+              }}
             >
               <div className="flex gap-4 flex-col w-full">
-                <motion.div layoutId={`image-${award.title}-${id}`}>
+                <motion.div layoutId={`image-${award.title}-${id}`} className="w-full h-60 overflow-hidden rounded-lg">
                   <Image
-                    width={200}
-                    height={200}
+                    width={300}
+                    height={300}
                     src={award.img}
                     alt={award.title}
-                    className="h-60 w-full rounded-lg object-cover object-top"
+                    className="h-full w-full rounded-lg object-cover object-top"
                   />
                 </motion.div>
                 <div className="flex justify-center items-center flex-col">
                   <motion.h3
                     layoutId={`title-${award.title}-${id}`}
-                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-base"
                   >
                     {award.title}
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${award.description}-${id}`}
-                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                    className="text-neutral-600 dark:text-neutral-400 text-center text-base"
                   >
                     {award.description}
                   </motion.p>
@@ -158,7 +165,7 @@ const Awards = () => {
               </div>
             </motion.div>
           ))}
-        </ul>
+        </div>
       </section>
     </>
   );
