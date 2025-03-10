@@ -52,7 +52,7 @@ export default function RecentProjects() {
                   title={"Visit"}
                   icon={<FaLocationArrow className="text-xs sm:text-sm" />}
                   position="right"
-                  otherClasses="h-8 sm:h-9 lg:h-10 px-4 sm:px-5 lg:px-8 gap-1 md:gap-2 tracking-wide text-sm lg:text-base"
+                  otherClasses="h-8 sm:h-9 lg:h-10 px-4 sm:px-5 lg:px-8 gap-1 md:gap-2 tracking-wide text-xs lg:text-sm"
                 />
               </a>
             </div>
