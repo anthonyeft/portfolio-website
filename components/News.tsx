@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/Carousel";
 import ThemeCard from "./ui/ThemeCard";
 import MagicButton from "./ui/MagicButton";
-import { newsArticles } from "@/data/index.tsx";
+import { newsNetworks, newsArticles } from "@/data/index.tsx";
 import Image from "next/image";
 
 const News = () => {
   const [api, setApi] = useState<any>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [totalSlides, setTotalSlides] = useState(newsArticles.length);
 
   // Setup the carousel API
   const onSelect = () => {
@@ -23,32 +22,45 @@ const News = () => {
 
     api.on("select", onSelect);
     
-    // Update total visible slides calculation
-    const calculateVisibleSlides = () => {
-      // For mobile, we show one slide at a time
-      if (window.innerWidth < 768) {
-        setTotalSlides(newsArticles.length);
-      } else if (window.innerWidth < 1024) {
-        // For medium screens we show two slides (md:basis-1/2)
-        setTotalSlides(Math.ceil(newsArticles.length / 2));
-      } else {
-        // For large screens we show three slides (lg:basis-1/3)
-        setTotalSlides(Math.ceil(newsArticles.length / 3));
-      }
-    };
-
-    calculateVisibleSlides();
-    window.addEventListener('resize', calculateVisibleSlides);
-    
     return () => {
       api.off("select", onSelect);
-      window.removeEventListener('resize', calculateVisibleSlides);
     };
   }, [api]);
 
   return (
     <section id="news" className="flex flex-col py-12 px-0 sm:px-6">
       <h1 className="heading mb-16 px-4 sm:px-0">News</h1>
+
+      <div className="w-full overflow-hidden relative h-8 md:h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
+        <div className="flex w-max h-full">
+          <div className="flex animate-scroll">
+            {newsNetworks.map((logo, index) => (
+              <div key={index} className="flex-shrink-0 mr-4 md:mr-10 items-center h-full">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="object-contain h-full w-auto"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex animate-scroll">
+            {newsNetworks.map((logo, index) => (
+              <div key={index} className="flex-shrink-0 mr-4 md:mr-10 items-center h-full">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="object-contain h-full w-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* News Articles Carousel */}
       <Carousel
@@ -89,7 +101,7 @@ const News = () => {
 
       {/* Pagination Dots - Only visible on mobile */}
       <div className="flex justify-center mt-6 sm:hidden gap-1.5">
-        {Array.from({ length: totalSlides }).map((_, index) => (
+        {newsArticles.map((_, index) => (
           <button
             key={index}
             onClick={() => api?.scrollTo(index)}
