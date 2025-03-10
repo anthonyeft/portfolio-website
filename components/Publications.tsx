@@ -132,7 +132,7 @@ const Publications = () => {
         </h1>
         
         <ul className="max-width-2xl mx-auto w-full gap-4">
-          {publications.map((publication, index) => (
+          {publications.map((publication) => (
             <ThemeCard
               layoutId={`publication-${publication.title}-${id}`}
               key={`publication-${publication.title}-${id}`}
