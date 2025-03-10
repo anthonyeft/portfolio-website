@@ -31,37 +31,6 @@ const News = () => {
     <section id="news" className="flex flex-col py-12 px-0 sm:px-6">
       <h1 className="heading mb-16 px-4 sm:px-0">News</h1>
 
-      <div className="w-full overflow-hidden relative h-8 md:h-10 mb-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_7%,_black_93%,transparent_100%)]">
-        <div className="flex w-max h-full">
-          <div className="flex animate-scroll">
-            {newsNetworks.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 mr-4 md:mr-10 items-center h-full">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="object-contain h-full w-auto"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="flex animate-scroll">
-            {newsNetworks.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 mr-4 md:mr-10 items-center h-full">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="object-contain h-full w-auto"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* News Articles Carousel */}
       <Carousel
         opts={{
