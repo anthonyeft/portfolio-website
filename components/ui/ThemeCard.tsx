@@ -12,7 +12,10 @@ interface ThemeCardProps {
 
 // Helper function to extract rounding-related classes
 const extractRoundingClasses = (classes: string) => {
-  return classes.split(" ").filter((cls) => cls.startsWith("rounded"));
+  return classes.split(" ").filter((cls) => 
+    cls.startsWith("rounded") || 
+    cls.match(/^(sm|md|lg):rounded/)
+  );
 };
 
 // Use React.forwardRef to allow ref to be optionally passed
