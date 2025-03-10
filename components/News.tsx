@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/Carousel";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/Carousel";
 import ThemeCard from "./ui/ThemeCard";
 import MagicButton from "./ui/MagicButton";
 import { newsNetworks, newsArticles } from "@/data/index.tsx";
 import Image from "next/image";
 
 const News = () => {
-  const [api, setApi] = useState<any>(null);
+  const [api, setApi] = useState<CarouselApi | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Setup the carousel API
