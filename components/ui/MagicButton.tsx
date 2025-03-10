@@ -23,8 +23,8 @@ const MagicButton = ({
 }) => {
   return (
     <motion.button
-      className={`relative inline-flex overflow-hidden rounded-2xl cursor-pointer items-center justify-center
-        bg-black-100 text-sm font-medium text-white backdrop-blur-3xl outline outline-1 outline-card_border_color ${otherClasses} ${
+      className={`relative inline-flex overflow-hidden rounded-lg lg:rounded-2xl cursor-pointer items-center justify-center
+        bg-black-100 text-xs md:text-sm font-medium text-white backdrop-blur-3xl outline outline-1 outline-card_border_color ${otherClasses} ${
         isLoading || isSubmitted ? 'cursor-not-allowed opacity-50' : ''
       }`}
       whileHover={{ outlineWidth: isLoading || isSubmitted ? '1px' : '5px', transition: { type: 'easeInOut' } }}
