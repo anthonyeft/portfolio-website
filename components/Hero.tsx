@@ -31,6 +31,8 @@ export default function Hero() {
           solving global health challenges through machine learning.
         </p>
 
+        <a href="https://www.linkedin.com/in/helen-efthimiadis/">View Details</a>
+
         <a href="#about">
           <MagicButton
             title="Learn More"
