@@ -1,0 +1,43 @@
+// Original articles and thumbnails published on ScienceFair.io by Anthony Efthimiadis.
+export const blogs = [
+  {
+    slug: "insider-look-isef",
+    title: "Navigating the Big Stage: An Insider's Look at the ISEF Event Week",
+    date: "2026-04-14",
+    category: "Inside ISEF",
+    description: "My perspective on the people, presentations, and moments that make ISEF week memorable.",
+    image: "/blogs/isef-event-week.webp",
+    imageAlt: "ISEF event week, featured in Anthony Efthimiadis's firsthand guide",
+    imagePosition: "10% 48.9%",
+  },
+  {
+    slug: "what-to-do-after-qualifying-for-isef",
+    title: "What to Do After Qualifying for ISEF: A Strategic Preparation Guide",
+    date: "2026-02-18",
+    category: "Preparation",
+    description: "A practical plan for taking your project from regional success to the international stage.",
+    image: "/blogs/isef-preparation.webp",
+    imageAlt: "Four ISEF finalists standing in front of the ISEF sign",
+    imagePosition: "center",
+  },
+  {
+    slug: "paperwork-for-regional-science-fair",
+    title: "Deadline Alert: Essential Paperwork for Regional Science Fair Submissions",
+    date: "2026-01-20",
+    category: "Science fair essentials",
+    description: "How to organize approvals, forms, and deadlines so your research makes it to judging day.",
+    image: "/blogs/regional-fair-paperwork.webp",
+    imageAlt: "Paperwork featured in Anthony Efthimiadis's regional science fair submission guide",
+    imagePosition: "48.4% 80.9%",
+  },
+  {
+    slug: "mastering-the-framework-why-the-isef-rules-are-your-project-s-best-friend",
+    title: "Mastering the Framework: Why the ISEF Rules are Your Project's Best Friend",
+    date: "2025-11-20",
+    category: "Research foundations",
+    description: "Using the ISEF framework to build thoughtful research that you can confidently defend.",
+    image: "/blogs/isef-rules.webp",
+    imageAlt: "Research illustration accompanying Anthony Efthimiadis's guide to ISEF rules",
+    imagePosition: "center",
+  },
+];

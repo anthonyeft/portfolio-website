@@ -5,6 +5,7 @@ import { FaJava } from "react-icons/fa"
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Blogs", link: "#blogs" },
   { name: "Awards", link: "#awards" },
   { name: "News", link: "#news" },
   { name: "Contact", link: "#contact" },

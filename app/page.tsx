@@ -13,6 +13,7 @@ const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
 
 const Awards = dynamic(() => import("@/components/Awards"));
 const News = dynamic(() => import("@/components/News"));
+const Blogs = dynamic(() => import("@/components/Blogs"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <About />
         <RecentProjects />
+        <Blogs />
         <Awards />
         <News />
         <Contact />
